@@ -25,10 +25,13 @@ const kids = [
 
 let mysteryKid;
 let selectedKid = null;
+let lives = 6; // Start with 6 lives
 
 startGame();
 
 function startGame() {
+    lives = 6; // Reset lives on new game
+    document.getElementById("lives").innerText = `Lives: ${lives}`;
     document.getElementById("reset").style.display = "none";
     document.getElementById("feedback").innerText = "";
     document.getElementById("answer").innerText = "";
@@ -36,6 +39,7 @@ function startGame() {
     selectedKid = null;
     document.getElementById("selected-info").innerText = "Click a photo to select, then guess.";
     mysteryKid = kids[Math.floor(Math.random() * kids.length)];
+    enableQuestions(); // Ensure question buttons are enabled
     displayKids();
 }
 
@@ -56,6 +60,7 @@ function displayKids() {
 
 function handleKidClick(card, kid) {
     if (card.classList.contains("eliminated")) return;
+    if (lives <= 0) return; // Prevent interaction if game is over
     if (selectedKid === kid) {
         card.classList.remove("selected");
         selectedKid = null;
@@ -71,20 +76,40 @@ function handleKidClick(card, kid) {
 }
 
 function askQuestion(trait) {
+    if (lives <= 0) return; // Prevent questions if game is over
     const answer = mysteryKid[trait] ? "Yes" : "No";
     document.getElementById("answer").innerText = `${answer}. Click photos to eliminate!`;
 }
 
 function checkGuess() {
-    if (!selectedKid) return;
+    if (!selectedKid || lives <= 0) return;
     if (selectedKid === mysteryKid) {
         document.getElementById("feedback").innerText = "You got it! That’s the mystery kid!";
         document.getElementById("reset").style.display = "block";
+        disableQuestions(); // Disable further questions
     } else {
+        lives--;
+        document.getElementById("lives").innerText = `Lives: ${lives}`;
         document.getElementById("feedback").innerText = "Nope, not that one!";
         document.querySelector(".selected").classList.add("eliminated");
         selectedKid = null;
         document.getElementById("guess-btn").disabled = true;
         document.getElementById("selected-info").innerText = "Click a photo to select, then guess.";
+        
+        if (lives <= 0) {
+            document.getElementById("feedback").innerText = `Game Over! The mystery kid was ${mysteryKid.name}.`;
+            document.getElementById("reset").style.display = "block";
+            disableQuestions(); // Disable further questions
+        }
     }
+}
+
+function disableQuestions() {
+    const buttons = document.querySelectorAll("#questions button");
+    buttons.forEach(button => button.disabled = true);
+}
+
+function enableQuestions() {
+    const buttons = document.querySelectorAll("#questions button");
+    buttons.forEach(button => button.disabled = false);
 }

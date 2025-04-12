@@ -5,6 +5,12 @@ body {
 h1 {
     margin: 20px;
 }
+#lives {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    color: #d32f2f; /* Red color for visibility */
+}
 #questions {
     margin: 20px;
 }
@@ -20,11 +26,12 @@ button {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    max-width: 650px; /* Adjusted for 5 columns, 22 images */
+    max-width: 650px;
     margin: 20px auto;
 }
 .kid-card {
     cursor: pointer;
+    text-align: center;
 }
 .kid-card img {
     width: 100px;
@@ -37,6 +44,11 @@ button {
 }
 .kid-card.selected img {
     border-color: blue;
+}
+.kid-card .name {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
 }
 #guess-section {
     margin: 20px;
