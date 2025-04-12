@@ -1,26 +1,39 @@
 const kids = [
     { name: "Makani", image: "images/Makani.JPG", brownHair: true, glasses: false, boy: true, blonde: false, tall: true, skinny: true, big: false, funny: true },
-    { name: "Marquis", image: "images/Marquis.JPG", brownHair: false, glasses: true, boy: false, blonde: true, tall: false, skinny: false, big: true, funny: false },
-    { name: "Adalyn", image: "images/Adalyn.JPG", brownHair: true, glasses: true, boy: true, blonde: false, tall: true, skinny: true, big: false, funny: true },
-    { name: "MichaelDawson", image: "images/MichaelDawson.JPG", brownHair: false, glasses: false, boy: false, blonde: true, tall: false, skinny: false, big: true, funny: false },
-    { name: "Anastasia", image: "images/Anastasia.JPG", brownHair: true, glasses: false, boy: true, blonde: false, tall: true, skinny: true, big: false, funny: true },
-    { name: "Preslee", image: "images/Preslee.JPG", brownHair: false, glasses: true, boy: false, blonde: true, tall: false, skinny: false, big: true, funny: false },
-    { name: "Blaire", image: "images/Blaire.JPG", brownHair: true, glasses: false, boy: true, blonde: false, tall: true, skinny: true, big: false, funny: true },
-    { name: "Brynlee", image: "images/Brynlee.JPG", brownHair: false, glasses: false, boy: false, blonde: true, tall: false, skinny: false, big: true, funny: false },
-    { name: "Casey", image: "images/Casey.JPG", brownHair: true, glasses: true, boy: true, blonde: false, tall: true, skinny: true, big: false, funny: true },
-    { name: "Brodie", image: "images/Brodie.JPG", brownHair: false, glasses: false, boy: false, blonde: true, tall: false, skinny: false, big: true, funny: false },
-    { name: "Kaylee", image: "images/Kaylee.JPG", brownHair: true, glasses: false, boy: true, blonde: false, tall: true, skinny: true, big: false, funny: true },
-    { name: "Paige", image: "images/Paige.JPG", brownHair: false, glasses: true, boy: false, blonde: true, tall: false, skinny: false, big: true, funny: false },
-    { name: "Landon", image: "images/Landon.JPG", brownHair: true, glasses: false, boy: true, blonde: false, tall: true, skinny: true, big: false, funny: true },
-    { name: "Rhett", image: "images/Rhett.JPG", brownHair: false, glasses: false, boy: false, blonde: true, tall: false, skinny: false, big: true, funny: false },
-    { name: "Levi", image: "images/Levi.JPG", brownHair: true, glasses: true, boy: true, blonde: false, tall: true, skinny: true, big: false, funny: true },
-    { name: "Brylee", image: "images/Brylee.JPG", brownHair: false, glasses: false, boy: false, blonde: true, tall: false, skinny: false, big: true, funny: false },
-    { name: "Sydney", image: "images/Sydney.JPG", brownHair: true, glasses: false, boy: true, blonde: false, tall: true, skinny: true, big: false, funny: true },
-    { name: "Mylee", image: "images/Mylee.JPG", brownHair: false, glasses: true, boy: false, blonde: true, tall: false, skinny: false, big: true, funny: false },
-    { name: "Zeriah", image: "images/Zeriah.JPG", brownHair: true, glasses: false, boy: true, blonde: false, tall: true, skinny: true, big: false, funny: true },
-    { name: "Dakarii", image: "images/Dakarii.JPG", brownHair: false, glasses: false, boy: false, blonde: true, tall: false, skinny: false, big: true, funny: false },
-    { name: "Aiden", image: "images/Aiden.JPG", brownHair: true, glasses: true, boy: true, blonde: false, tall: true, skinny: true, big: false, funny: true },
-    { name: "Andrew", image: "images/Andrew.JPG", brownHair: false, glasses: false, boy: false, blonde: true, tall: false, skinny: false, big: true, funny: false }
+    { name: "Marquis", image: "images/Marquis.JPG", brownHair: true, glasses: false, boy: true, blonde: false, tall: false, skinny: false, big: true, funny: false },
+
+    { name: "Adalyn", image: "images/Adalyn.JPG", brownHair: true, glasses: false, boy: false, blonde: false, tall: false, skinny: true, big: false, funny: false },
+    { name: "MichaelDawson", image: "images/MichaelDawson.JPG", brownHair: false, glasses: false, boy: true, blonde: true, tall: false, skinny: true, big: false, funny: true },
+
+    { name: "Anastasia", image: "images/Anastasia.JPG", brownHair: true, glasses: false, boy: false, blonde: false, tall: true, skinny: true, big: false, funny: false },
+
+    { name: "Preslee", image: "images/Preslee.JPG", brownHair: false, glasses: true, boy: false, blonde: true, tall: true, skinny: true, big: false, funny: false },
+    { name: "Blaire", image: "images/Blaire.JPG", brownHair: true, glasses: false, boy: false, blonde: false, tall: true, skinny: true, big: false, funny: false },
+    { name: "Brynlee", image: "images/Brynlee.JPG", brownHair: true, glasses: false, boy: false, blonde: false, tall: false, skinny: true, big: false, funny: false },
+    { name: "Casey", image: "images/Casey.JPG", brownHair: true, glasses: false, boy: true, blonde: false, tall: true, skinny: false, big: true, funny: true },
+
+    { name: "Brodie", image: "images/Brodie.JPG", brownHair: false, glasses: false, boy: true, blonde: true, tall: false, skinny: true, big: false, funny: true },
+
+    { name: "Kaylee", image: "images/Kaylee.JPG", brownHair: false, glasses: false, boy: false, blonde: false, tall: false, skinny: true, big: false, funny: false },
+    { name: "Paige", image: "images/Paige.JPG", brownHair: true, glasses: false, boy: false, blonde: false, tall: false, skinny: true, big: false, funny: true },
+    
+    { name: "Landon", image: "images/Landon.JPG", brownHair: false, glasses: false, boy: true, blonde: true, tall: false, skinny: true, big: false, funny: true },
+    { name: "Rhett", image: "images/Rhett.JPG", brownHair: true, glasses: true, boy: true, blonde: false, tall: false, skinny: false, big: true, funny: true },
+    { name: "Levi", image: "images/Levi.JPG", brownHair: false, glasses: true, boy: true, blonde: true, tall: true, skinny: true, big: false, funny: true },
+
+    { name: "Brylee", image: "images/Brylee.JPG", brownHair: true, glasses: false, boy: false, blonde: false, tall: false, skinny: true, big: false, funny: false },
+
+    { name: "Sydney", image: "images/Sydney.JPG", brownHair: true, glasses: false, boy: false, blonde: false, tall: true, skinny: true, big: false, funny: false },
+
+    { name: "Mylee", image: "images/Mylee.JPG", brownHair: false, glasses: false, boy: false, blonde: true, tall: true, skinny: true, big: false, funny: false },
+
+    { name: "Zeriah", image: "images/Zeriah.JPG", brownHair: true, glasses: true, boy: true, blonde: false, tall: true, skinny: false, big: true, funny: false },
+
+    { name: "Dakarii", image: "images/Dakarii.JPG", brownHair: false, glasses: false, boy: true, blonde: false, tall: true, skinny: true, big: false, funny: false },
+
+    { name: "Aiden", image: "images/Aiden.JPG", brownHair: true, glasses: false, boy: true, blonde: false, tall: true, skinny: true, big: false, funny: true },
+
+    { name: "Andrew", image: "images/Andrew.JPG", brownHair: false, glasses: false, boy: true, blonde: true, tall: true, skinny: true, big: false, funny: true }
 ];
 
 let mysteryKid;
