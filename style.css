@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+h1 {
+    margin: 20px;
+}
+#questions {
+    margin: 20px;
+}
+button {
+    padding: 10px 20px;
+    margin: 5px;
+}
+#answer {
+    font-size: 18px;
+    margin: 10px;
+}
+#kids-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    max-width: 650px; /* Adjusted for 5 columns, 22 images */
+    margin: 20px auto;
+}
+.kid-card {
+    cursor: pointer;
+}
+.kid-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+.kid-card.eliminated img {
+    opacity: 0.3;
+}
+.kid-card.selected img {
+    border-color: blue;
+}
+#guess-section {
+    margin: 20px;
+}
+#feedback {
+    font-size: 20px;
+    margin: 20px;
+}
